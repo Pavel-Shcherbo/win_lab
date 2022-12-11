@@ -1,5 +1,4 @@
 ﻿  functions.c
-C:\Users\Павел\Desktop\win_lab\lab-7\functions.c(59,30): error C2075: "shortest_str": для инициализации требуется список инициализаторов, заключенный в фигурные скобки.
-  main.c
-C:\Users\Павел\Desktop\win_lab\lab-7\main.c(7,1): warning C4047: инициализация: "void (__cdecl *)(void)" отличается по уровням косвенного обращения от "void *(__cdecl *)(void)"
-  Создание кода...
+C:\Users\Павел\Desktop\win_lab\lab-7\functions.c(14,25): warning C4028: формальный параметр 1 отличается от объявления
+C:\Users\Павел\Desktop\win_lab\lab-7\functions.c(65,13): warning C4087: getchar: объявление с "void"-списком параметров
+  lab-7.vcxproj -> C:\Users\Павел\Desktop\win_lab\lab-7\x64\Debug\lab-7.exe

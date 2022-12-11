@@ -11,11 +11,11 @@ char* get_str(char* s, int k)
     return s;
 }
 
-int str_len(char* s)
-{
+int str_len(const char* s) {
     int i = 0;
-    while (s[i] != '\0')
+    while (s[i] != '\0') {
         i++;
+    }
     return i;
 }
 
@@ -57,11 +57,12 @@ void* choice(void) {
 void* task1(void)
 {
     char shortest_str[100] ;
+    shortest_str[99] = 0;
     int len, i, index = 0, min_wlen = 0, wlen = 0;
     int n = 100;
-    char *str = (char *) malloc(n);
-
+    char* str = (char*)malloc(n);
     printf("Enter a string: ");
+    getchar();
     get_str(str, n);
 
     len = str_len(str);
@@ -86,8 +87,8 @@ void* task1(void)
 }
 void* task2(void) {
     int n = 100, len_s, k;
-    char* s = (char*)malloc(sizeof(char) * n);
-    char* s0 = (char*)malloc(sizeof(char) * n);
+    char* s = (char*)malloc(n);
+    char* s0 = (char*)malloc(n);
     printf("enter s\n");
     get_str(s, n);
     printf("enter s0\n");
