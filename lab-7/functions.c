@@ -28,7 +28,6 @@ char* str_cat(char * s1, char * s2, int k)
     *(s + k + len2 + i) = '\0';
     s1 = s;
     return s1;
-    free(s1);
     free(s2);
 }
 
