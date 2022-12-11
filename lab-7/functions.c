@@ -28,6 +28,8 @@ char* str_cat(char * s1, char * s2, int k)
     *(s + k + len2 + i) = '\0';
     s1 = s;
     return s1;
+    free(s1);
+    free(s2);
 }
 
 void* choice(void) {
@@ -105,5 +107,5 @@ void input_string(char** string)
         (*string)[i++] = char_;
         (*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
     }
-    if (*string != 0) { (*string)[i] = '\0'; }
+    (*string)[i] = '\0';
 }
