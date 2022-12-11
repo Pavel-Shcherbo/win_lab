@@ -56,10 +56,10 @@ void* choice(void) {
 
 void* task1(void)
 {
-    char shortest_str[100];
+    char shortest_str[100] = 0;
     int len, i, index = 0, min_wlen = 0, wlen = 0;
     int n = 100;
-    char* str = (char*)malloc(sizeof(char) * n);
+    char *str = (char *) malloc(n);
 
     printf("Enter a string: ");
     get_str(str, n);
