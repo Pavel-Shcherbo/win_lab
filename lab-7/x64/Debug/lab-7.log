@@ -1,2 +1,2 @@
-﻿  main.c
-C:\Users\Павел\Desktop\win_lab\lab-7\main.c(7,1): warning C4047: инициализация: "void (__cdecl *)(void)" отличается по уровням косвенного обращения от "void *(__cdecl *)(void)"
+﻿  functions.c
+  lab-7.vcxproj -> C:\Users\Павел\Desktop\win_lab\lab-7\x64\Debug\lab-7.exe

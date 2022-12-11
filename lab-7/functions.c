@@ -70,7 +70,6 @@ void* task1(void)
     char* str = (char*)malloc(sizeof(char) * n);
 
     printf("Enter a string: ");
-    getchar();
     get_str(str, n);
 
     len = str_len(str);
@@ -98,7 +97,6 @@ void* task2(void) {
     char* s = (char*)malloc(sizeof(char) * n);
     char* s0 = (char*)malloc(sizeof(char) * n);
     printf("enter s\n");
-    getchar();
     get_str(s, n);
     printf("enter s0\n");
     get_str(s0, n);
