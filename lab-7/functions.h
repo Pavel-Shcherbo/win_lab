@@ -6,3 +6,4 @@ void* task1(void);
 void* task2(void);
 void* choice(void);
 void input_string(char** string);
+void string_insert(char** s1, char** s2, char k);

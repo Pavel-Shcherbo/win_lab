@@ -2,15 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* get_str(char* s, int k)
-{
-    int c, i = 0;
-    while (--k > 0 && (c = getchar()) != EOF && c != '\n')
-        s[i++] = c;   //Enter or Ctrl + Z
-    s[i] = '\0';
-    return s;
-}
-
 int str_len(char* s) {
     int i = 0;
     while (s[i] != '\0') {
@@ -83,7 +74,7 @@ void* task1(void)
     return 0;
 }
 void* task2(void) {
-    int len_s, k;
+    int len_s, k = 0;
     char* s = (char*)calloc(1, 1);
     printf("Enter string\n");
     input_string(&s);
@@ -113,5 +104,5 @@ void input_string(char** string)
         (*string)[i++] = char_;
         (*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
     }
-    (*string)[i] = '\0';
+    if (*string != 0) { (*string)[i] = '\0'; }
 }
