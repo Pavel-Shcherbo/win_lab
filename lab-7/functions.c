@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int str_len(char* s) {
+int str_len(char * s) {
     int i = 0;
     while (s[i] != '\0') {
         i++;
@@ -10,11 +10,12 @@ int str_len(char* s) {
     return i;
 }
 
-char* str_cat(char* s1, char* s2, int k)
+char* str_cat(char * s1, char * s2, int k)
 {
     char* s;
-    int i, len1 = str_len(s1), len2 = str_len(s2);
-
+    int i;
+    int len1 = str_len(s1);
+    int  len2 = str_len(s2);
     if (k > len1) k = len1;
     if ((s = (char*)malloc(sizeof(char) * (len1 + len2))) == NULL)
         return s1;
