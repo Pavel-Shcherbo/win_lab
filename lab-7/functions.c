@@ -57,7 +57,6 @@ void* choice(void) {
 void* task1(void)
 {
     char shortest_str[100] ;
-    shortest_str[99] = 0;
     int len, i, index = 0, min_wlen = 0, wlen = 0;
     int n = 100;
     char* str = (char*)calloc(1, 1);
@@ -82,37 +81,11 @@ void* task1(void)
     }
     shortest_str[i] = '\0';
     printf("Shortest word: %s\n", shortest_str);
-    destroyString(str);
+    free(str);
     return 0;
 }
 void* task2(void) {
-    int n = 100, len_s, k;
-    char* s = NULL;
-    char* s0 = NULL;
-    s = (char*)calloc(1, 1);
-    printf("Enter string\n");
-    input_string(&s);
-    s0 = (char*)calloc(1, 1);
-    printf("\nEnter substring\n");
-    input_string(&s0);
-    printf("enter k\n");
-    scanf_s("%d", &k);
-    len_s = str_len(s);
-    k = str_len(s0) - k;
-    char* result = s0 + k;
-    s = str_cat(s, result, len_s / 2);
-    printf("new s\n");
-    printf("%s\n", s);
-    destroyString(s);
-    destroyString(s0);
-    return task2;
-}
-
-void* destroyString(char** s)
-{
-    free(*s);
-
-    *s = NULL;
+    printf("hello");
 }
 
 void input_string(char** string)
