@@ -82,7 +82,7 @@ void* task1(void)
     }
     shortest_str[i] = '\0';
     printf("Shortest word: %s\n", shortest_str);
-    free(str);
+    destroyString(str);
     return 0;
 }
 void* task2(void) {
@@ -91,6 +91,7 @@ void* task2(void) {
     char* s0 = (char*)malloc(n);
     printf("enter s\n");
     get_str(s, n);
+    getchar();
     printf("enter s0\n");
     get_str(s0, n);
     printf("enter k\n");
@@ -101,8 +102,14 @@ void* task2(void) {
     s = str_cat(s, result, len_s / 2);
     printf("new s\n");
     printf("%s\n", s);
-    free(s);
-    free(s0);
+    destroyString(s);
+    destroyString(s0);
     return task2;
 }
 
+void* destroyString(char** s)
+{
+    free(*s);
+
+    *s = NULL;
+}
