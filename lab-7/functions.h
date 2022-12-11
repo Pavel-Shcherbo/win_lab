@@ -7,3 +7,6 @@ void* task1(void);
 void* task2(void);
 void* choice(void);
 void* destroyString(char** s);
+char* initString(const char* text);
+char* readString();
+int stringLength(const char* text);

@@ -60,7 +60,7 @@ void* task1(void)
     shortest_str[99] = 0;
     int len, i, index = 0, min_wlen = 0, wlen = 0;
     int n = 100;
-    char* str = (char*)malloc(n);
+    char* str = (char*)malloc(sizeof(char) * n);
     printf("Enter a string: ");
     getchar();
     get_str(str, n);
@@ -87,14 +87,16 @@ void* task1(void)
 }
 void* task2(void) {
     int n = 100, len_s, k;
-    char* s = (char*)malloc(n);
-    char* s0 = (char*)malloc(n);
+    char* s = (char*)malloc(sizeof(char) * n);
+    char* s0 = (char*)malloc(sizeof(char) * n);
     printf("enter s\n");
     get_str(s, n);
     getchar();
     printf("enter s0\n");
     get_str(s0, n);
+    getchar();
     printf("enter k\n");
+    getchar();
     scanf_s("%d", &k);
     len_s = str_len(s);
     k = str_len(s0) - k;
