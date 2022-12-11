@@ -60,10 +60,10 @@ void* task1(void)
     shortest_str[99] = 0;
     int len, i, index = 0, min_wlen = 0, wlen = 0;
     int n = 100;
-    char* str = (char*)malloc(sizeof(char) * n);
-    printf("Enter a string: ");
-    getchar();
-    get_str(str, n);
+    char* str = (char*)calloc(1, 1);
+
+    printf("Enter string\n");
+    input_string(&str);
 
     len = str_len(str);
     for (i = 0; i <= len; i++) {
@@ -87,16 +87,15 @@ void* task1(void)
 }
 void* task2(void) {
     int n = 100, len_s, k;
-    char* s = (char*)malloc(sizeof(char) * n);
-    char* s0 = (char*)malloc(sizeof(char) * n);
-    printf("enter s\n");
-    get_str(s, n);
-    getchar();
-    printf("enter s0\n");
-    get_str(s0, n);
-    getchar();
+    char* s = NULL;
+    char* s0 = NULL;
+    s = (char*)calloc(1, 1);
+    printf("Enter string\n");
+    input_string(&s);
+    s0 = (char*)calloc(1, 1);
+    printf("\nEnter substring\n");
+    input_string(&s0);
     printf("enter k\n");
-    getchar();
     scanf_s("%d", &k);
     len_s = str_len(s);
     k = str_len(s0) - k;
@@ -114,4 +113,17 @@ void* destroyString(char** s)
     free(*s);
 
     *s = NULL;
+}
+
+void input_string(char** string)
+{
+    int char_;
+    int i = 0;
+    rewind(stdin);
+    while ((char_ = getchar()) != EOF && char_ != '\n')
+    {
+        (*string)[i++] = char_;
+        (*string) = (char*)realloc((*string), (i + 1) * sizeof(char));
+    }
+    (*string)[i] = '\0';
 }
