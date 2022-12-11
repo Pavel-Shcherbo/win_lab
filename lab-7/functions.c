@@ -38,14 +38,6 @@ char* str_cat(char* s1, char* s2, int k)
     return s1;
 }
 
-int checkinput(int a) {
-    while (scanf_s("%d", &a) != 1 || getchar() != '\n') {
-        printf("Pls enter a NUMBER\n");
-        rewind(stdin);
-    }
-    return a;
-}
-
 void* choice(void) {
     int num;
     printf("What task you want to solve 1 or 2?");
